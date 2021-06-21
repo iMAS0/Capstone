@@ -3,7 +3,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-database_path = os.environ['DATABASE_URL']
+database_path = os.environ.get('DATABASE_URL?sslmode=require')
 db = SQLAlchemy()
 
 '''
