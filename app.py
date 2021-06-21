@@ -28,7 +28,7 @@ def create_app(test_config=None):
 
 
     @app.route('/')
-    def status():
+    def health():
         return jsonify({'status': 'Running!!'}), 200
     # ROUTES
     '''
