@@ -30,7 +30,7 @@ def create_app(test_config=None):
 
     @app.route('/')
     def status():
-        return jsonify({ 'app': 'up'})
+        return jsonify({'app': 'up'})
     '''
       GET /actors it should return list of actors
   '''
@@ -200,6 +200,7 @@ def create_app(test_config=None):
             "error": 400,
             "message": "bad request"
         }), 400
+
     @app.errorhandler(AuthError)
     def handle_auth_error(ex):
         return jsonify({

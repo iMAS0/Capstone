@@ -18,6 +18,7 @@ def setup_db(app, database_path=database_path):
     db.app = app
     db.init_app(app)
 
+
 def db_drop_and_create_all():
     """
     drops the database tables and starts fresh
@@ -25,7 +26,6 @@ def db_drop_and_create_all():
     """
     db.drop_all()
     db.create_all()
-    
 
 
 '''
@@ -39,7 +39,7 @@ class Movie(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
-    release_date = db.Column(db.DateTime, nullable = False)
+    release_date = db.Column(db.DateTime, nullable=False)
 
     def __init__(self, title, release_date):
         self.title = title
@@ -75,8 +75,8 @@ class Actor(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
-    age = db.Column(db.Integer,nullable = False)
-    gender = db.Column(db.CHAR, nullable = False)
+    age = db.Column(db.Integer, nullable=False)
+    gender = db.Column(db.CHAR, nullable=False)
 
     def __init__(self, name, age, gender):
         self.name = name

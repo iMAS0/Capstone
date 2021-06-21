@@ -12,8 +12,10 @@ casting_director = os.environ['casting_director']
 executive_producer = os.environ['executive_producer']
 database_path = os.environ['test_database']
 
+
 class ACastingTestCase(unittest.TestCase):
     ''' This class represents the ACasting test case'''
+
     def setUp(self):
         """Define test variables and initialize app."""
         self.app = create_app()
