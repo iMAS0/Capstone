@@ -343,11 +343,11 @@ There are two models:
 	```
 	
 * **Request Body:**
-	```json
+```json
 	{
 		"name": "Example"
-        }'
-  ```
+        }
+```
   
 * **Example Response:**
     ```json
