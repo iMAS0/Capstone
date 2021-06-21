@@ -4,7 +4,7 @@ import json
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from models import db, Actor, Movie, setup_db
-from app import app
+from app import create_app
 
 
 casting_assistant = os.environ['casting_assistant']
@@ -16,7 +16,7 @@ class ACastingTestCase(unittest.TestCase):
     ''' This class represents the ACasting test case'''
     def setUp(self):
         """Define test variables and initialize app."""
-        self.app = app
+        self.app = create_app()
         self.client = self.app.test_client
         setup_db(self.app, database_path)
 
