@@ -171,8 +171,6 @@ There are two models:
 
 * Responds with a 404 error if no actors are not found
 
-* **Example Request:** `curl 'http://localhost:5000/actors'`
-
 * **Expected Result:**
     ```json
 	{
@@ -211,13 +209,15 @@ There are two models:
 
 * **Example Request:** (Create)
     ```bash
-	curl --location --request POST 'http://localhost:5000/movies' \
-		--header 'Content-Type: application/json' \
-		--data-raw '{
-            		"title" : "An Example",
-            		"release_date": "1-2-1234"
-        		}'
+	-https://agency-full-stack.herokuapp.com/movies
     ```
+* **Request body:**
+    ```bash
+		{
+            	"title" : "An Example",
+            	"release_date": "1-2-1234"
+        	}'
+        ```
     
 * **Example Response:**
     ```bash
