@@ -209,14 +209,14 @@ There are two models:
 
 * **Example Request:** (Create)
     ```bash
-	-https://agency-full-stack.herokuapp.com/movies
+	https://agency-full-stack.herokuapp.com/movies
     ```
 * **Request body:**
-    ```bash
+    ```json
 		{
             	"title" : "An Example",
             	"release_date": "1-2-1234"
-        	}'
+        	}
         ```
     
 * **Example Response:**
@@ -235,17 +235,21 @@ There are two models:
 
 * Responds with a 422 error if data is not provided.
 
-* **Example Request:** (Create)
-    ```json
-	curl --location --request POST 'http://localhost:5000/actors' \
-		--header 'Content-Type: application/json' \
-		--data-raw '{
-			"name": "Example",
-			"age": "1",
-			"gender": "M"
-        }'
+* **Example Request:** 
+    ```bash
+    https://agency-full-stack.herokuapp.com/actors
     ```
-    
+
+* **Request body:**
+    ```json
+		{
+            	"name" : "Example",
+            	"age": "1",
+            	"gender": "M"
+        	}
+        ```
+        
+        
 * **Example Response:**
     ```json
 	{
@@ -260,12 +264,14 @@ There are two models:
 
 * Responds with a 422 error if it is not found.
 
-* **Example Request:** `curl --request DELETE 'http://localhost:5000/movies/1'`
-
+* **Example Request:** 
+    ```bash
+    https://agency-full-stack.herokuapp.com/movies/1
+	```
+	
 * **Example Response:**
     ```json
 	{
-
 		"success": true
     }
     ```
@@ -277,7 +283,10 @@ There are two models:
 
 * Responds with a 422 error if it is not found.
 
-* **Example Request:** `curl --request DELETE 'http://localhost:5000/actors/1'`
+* **Example Request:** 
+    ```bash
+    https://agency-full-stack.herokuapp.com/actors/1
+	```
 
 * **Example Response:**
     ```json
@@ -296,10 +305,13 @@ There are two models:
 * Update the corresponding fields for Movie with id <movie_id>
 
 * **Example Request:** 
-	```json
-    curl --location --request PATCH 'http://localhost:5000/movies/1' \
-		--header 'Content-Type: application/json' \
-		--data-raw '{
+    ```bash
+    https://agency-full-stack.herokuapp.com/movies/1
+	```
+	
+* **Request Body:**
+  ```json
+	{
 			"title": "Example"
         }'
   ```
@@ -326,11 +338,14 @@ There are two models:
 * Update the given fields for Actor with id <actor_id>
 
 * **Example Request:** 
+    ```bash
+    https://agency-full-stack.herokuapp.com/movies/1
+	```
+	
+* **Request Body:**
 	```json
-    curl --location --request PATCH 'http://localhost:5000/actors/1' \
-		--header 'Content-Type: application/json' \
-		--data-raw '{
-			"name": "Example"
+	{
+		"name": "Example"
         }'
   ```
   
@@ -345,6 +360,7 @@ There are two models:
 	    },
 	    "success": true
 	}
+	```
 ### Error Handling
 
 The API will return three error types when requests fail:
