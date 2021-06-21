@@ -63,7 +63,7 @@ def create_app(test_config=None):
             actor = Actor(name=name, age=age, gender=gender)
             actor.insert()
             return jsonify({'success': True}), 200
-        except:
+        except Exception:
             abort(422)
 
     '''
@@ -103,7 +103,7 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
             }), 200
-        except:
+        except Exception:
             abort(422)
     '''
       GET /moivies it should return list of movies
@@ -136,7 +136,7 @@ def create_app(test_config=None):
             movie = Movie(title=title, release_date=release_date)
             movie.insert()
             return jsonify({'success': True}), 200
-        except:
+        except Exception:
             abort(422)
 
     '''
@@ -172,7 +172,7 @@ def create_app(test_config=None):
             return jsonify({
                 'success': True,
             }), 200
-        except:
+        except Exception:
             abort(422)
     '''
   Create error handlers for all expected errors
