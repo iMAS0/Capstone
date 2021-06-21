@@ -26,6 +26,10 @@ def create_app(test_config=None):
     CORS(app)
     migrate = Migrate(app, db)
 
+
+    @app.route('/')
+    def status():
+        return jsonify({'status': 'Running!!'}), 200
     # ROUTES
     '''
       GET /actors it should return list of actors
