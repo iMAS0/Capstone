@@ -148,7 +148,10 @@ There are two models:
 
 * Responds with a 404 error if no movies are not found
 
-* **Example Request:** `curl 'http://localhost:5000/movies'`
+* **Example Request:** 
+    ```bash
+	https://agency-full-stack.herokuapp.com/movies
+    ```
 
 * **Expected Result:**
     ```json
@@ -170,6 +173,11 @@ There are two models:
 * Requires `view:actors` permission
 
 * Responds with a 404 error if no actors are not found
+
+* **Example Request:** 
+    ```bash
+	https://agency-full-stack.herokuapp.com/actors
+    ```
 
 * **Expected Result:**
     ```json
@@ -207,7 +215,7 @@ There are two models:
 
 * Responds with a 422 error if data is not provided.
 
-* **Example Request:** (Create)
+* **Example Request:** 
     ```bash
 	https://agency-full-stack.herokuapp.com/movies
     ```
@@ -217,7 +225,7 @@ There are two models:
             	"title" : "An Example",
             	"release_date": "1-2-1234"
         	}
-        ```
+    ```
     
 * **Example Response:**
     ```bash
@@ -247,14 +255,14 @@ There are two models:
             	"age": "1",
             	"gender": "M"
         	}
-        ```
+    ```
         
         
 * **Example Response:**
     ```json
 	{
 		"success": true
-    }
+    	}
     ```
 
 #### DELETE /movies/<int:movie_id>
@@ -273,7 +281,7 @@ There are two models:
     ```json
 	{
 		"success": true
-    }
+    	}
     ```
     
 #### DELETE /actors/<int:actor_id>
@@ -286,7 +294,7 @@ There are two models:
 * **Example Request:** 
     ```bash
     https://agency-full-stack.herokuapp.com/actors/1
-	```
+    ```
 
 * **Example Response:**
     ```json
@@ -307,14 +315,14 @@ There are two models:
 * **Example Request:** 
     ```bash
     https://agency-full-stack.herokuapp.com/movies/1
-	```
+    ```
 	
 * **Request Body:**
-  ```json
+    ```json
 	{
 			"title": "Example"
-        }'
-  ```
+        }
+    ```
   
 * **Example Response:**
     ```json
@@ -340,14 +348,14 @@ There are two models:
 * **Example Request:** 
     ```bash
     https://agency-full-stack.herokuapp.com/movies/1
-	```
+    ```
 	
 * **Request Body:**
-```json
+    ```json
 	{
 		"name": "Example"
         }
-```
+    ```
   
 * **Example Response:**
     ```json
@@ -360,7 +368,7 @@ There are two models:
 	    },
 	    "success": true
 	}
-	```
+    ```
 ### Error Handling
 
 The API will return three error types when requests fail:
