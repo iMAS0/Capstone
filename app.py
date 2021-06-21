@@ -27,6 +27,10 @@ def create_app(test_config=None):
     migrate = Migrate(app, db)
 
     # ROUTES
+
+    @app.route('/')
+    def status():
+        return jsonify({ 'app': 'up'})
     '''
       GET /actors it should return list of actors
   '''
