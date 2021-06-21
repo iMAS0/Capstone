@@ -3,7 +3,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-database_path = 'postgresql://bsgkkbwlmmsqcq:17bc1c0a4288a86d85fae2f512324e9fd41d1b61018464ab5844e3efafd91854@ec2-35-170-85-206.compute-1.amazonaws.com:5432/d8nl66dddbagth'
+database_path = "postgres://{}/{}".format('localhost:5432', 'capstone')
 db = SQLAlchemy()
 
 '''
