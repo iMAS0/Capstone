@@ -337,14 +337,14 @@ There are two models:
 * **Example Response:**
     ```json
 	{
-		"actor": { 
-			"name": "Example",
-			"Age: "1",
-			"gender": M
-			},
-		"success": true
-		}
-
+	    "actor": {
+		"age": 3,
+		"gender": "M",
+		"id": 1,
+		"name": "Example"
+	    },
+	    "success": true
+	}
 ### Error Handling
 
 The API will return three error types when requests fail:
