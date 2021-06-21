@@ -36,6 +36,7 @@ def status():
 '''
 
 @app.route('/actors')
+@requires_auth('get:actors')
 def get_actors():
     selection = Actor.query.order_by(Actor.id).all()
     current_actors = paginate_results(request, selection)
@@ -109,6 +110,7 @@ def delete_actor(token, actor_id):
 '''
 
 @app.route('/movies')
+@requires_auth('get:movies')
 def get_movies():
     selection = Movie.query.order_by(Movie.id).all()
     current_movies = paginate_results(request, selection)
